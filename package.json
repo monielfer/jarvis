@@ -1,0 +1,19 @@
+{
+  "name": "jarvis-root",
+  "version": "1.0.0",
+  "description": "JARVIS — Personal AI Assistant & Agent Orchestrator",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=backend\" \"npm run dev --workspace=frontend\"",
+    "build": "npm run build --workspace=frontend",
+    "start": "npm run start --workspace=backend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

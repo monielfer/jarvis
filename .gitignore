@@ -1,0 +1,68 @@
+# ── Secrets & Environment ─────────────────────────────────────────────────────
+# NUNCA commitar chaves ou variáveis de ambiente
+.env
+.env.*
+!.env.example
+config/.env
+*.key
+*.pem
+*.p12
+*.pfx
+*secret*
+*credentials*
+*_key.json
+service-account*.json
+google-credentials*.json
+
+# ── Dependencies ──────────────────────────────────────────────────────────────
+node_modules/
+.pnp
+.pnp.js
+
+# ── Build output ──────────────────────────────────────────────────────────────
+dist/
+build/
+.vite/
+frontend/dist/
+backend/dist/
+out/
+.next/
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+
+# ── OS & Editor ───────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/settings.json
+*.swp
+*.swo
+
+# ── Claude Code (configuração local do desenvolvedor) ────────────────────────
+.claude/
+
+# ── Cache ─────────────────────────────────────────────────────────────────────
+.cache/
+.parcel-cache/
+.eslintcache
+
+# ── Story Files (estado de runtime, não é código-fonte) ───────────────────────
+agents/storyFiles/data/*.json
+
+# ── Uploads e áudio temporário ────────────────────────────────────────────────
+uploads/
+tmp/
+temp/
+*.webm
+*.mp3
+*.wav
+*.ogg
+
+# ── Supabase ──────────────────────────────────────────────────────────────────
+supabase/.temp/
