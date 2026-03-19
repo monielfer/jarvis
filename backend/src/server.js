@@ -9,7 +9,8 @@ import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-config({ path: resolve(__dirname, '../../config/.env') });
+// Local: lê config/.env | Produção (Render): vars já injetadas, silent ignore
+config({ path: resolve(__dirname, '../../config/.env'), silent: true });
 
 import apiRoutes from './routes/api.js';
 import aiRoutes from './routes/ai.js';
